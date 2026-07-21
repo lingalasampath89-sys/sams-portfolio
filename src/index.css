@@ -1,0 +1,198 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap');
+
+:root {
+  /* Color Palette - Earthy Cream & Deep Green (Image Inspired) */
+  --bg-primary: #F5F3ED; /* Cream / Off-white */
+  --bg-secondary: #FFFFFF; /* White for cards */
+  --bg-tertiary: #1B241F; /* Deep Forest Green */
+  
+  --text-primary: #1C1E1A; /* Charcoal Black */
+  --text-secondary: #5F6158; /* Muted Olive Grey */
+  --text-highlight: #1B241F; /* Deep Forest Green */
+  --text-emphasized: #1B241F; 
+  
+  --accent-primary: #C85A17; /* Elegant Earthy Burnt Orange */
+  
+  --border-color: #DCE0D5;
+  
+  /* Typography */
+  --font-heading: 'Playfair Display', serif;
+  --font-body: 'Inter', sans-serif;
+  
+  /* Spacing System (8px based) */
+  --space-1: 8px;
+  --space-2: 16px;
+  --space-3: 24px;
+  --space-4: 32px;
+  --space-5: 40px;
+  --space-6: 48px;
+  --space-8: 64px;
+  --space-12: 96px;
+
+  /* Card Tokens */
+  --card-radius: 12px;
+  --card-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -1px rgba(0, 0, 0, 0.03);
+  --card-shadow-hover: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+
+  /* Layout */
+  --max-width: 1300px;
+  --section-padding: var(--space-12) var(--space-4);
+  
+  /* Transitions */
+  --transition-fast: 0.2s ease;
+  --transition-normal: 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  scrollbar-width: thin;
+  scrollbar-color: var(--accent-primary) var(--bg-primary);
+}
+
+body {
+  font-family: var(--font-body);
+  background-color: var(--bg-primary);
+  color: var(--text-secondary);
+  line-height: 1.6;
+  font-size: 18px;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+  transition: color var(--transition-fast);
+}
+
+a:hover {
+  color: var(--accent-primary);
+}
+
+ul {
+  list-style: none;
+}
+
+/* Typography Utilities */
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-heading);
+  line-height: 1.1;
+  font-weight: 500;
+  color: var(--accent-primary);
+  margin-bottom: 1.5rem;
+}
+
+p {
+  color: var(--text-primary);
+  margin-bottom: 1.5rem;
+}
+
+.muted {
+  color: var(--text-secondary);
+}
+
+/* Layout Utilities */
+.container {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+.section {
+  padding: var(--section-padding);
+}
+
+.section-title {
+  font-size: 2.5rem;
+  font-weight: 400;
+  margin-bottom: 3rem;
+}
+
+/* Button Utilities */
+.btn {
+  display: inline-block;
+  font-family: var(--font-body);
+  font-size: 0.85rem;
+  font-weight: 500;
+  padding: 0.6rem 1.5rem;
+  border: 1px solid var(--border-color);
+  border-radius: 4px;
+  color: var(--text-secondary);
+  background: transparent;
+  cursor: pointer;
+  transition: all var(--transition-fast);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.btn:hover {
+  background: var(--border-color);
+  color: var(--text-primary);
+}
+
+.btn-primary {
+  background: var(--accent-primary);
+  color: #FFFFFF;
+  border-color: var(--accent-primary);
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+}
+
+.btn-primary::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0%;
+  height: 100%;
+  background: var(--text-primary);
+  transition: width var(--transition-normal);
+  z-index: -1;
+}
+
+.btn-primary:hover::before {
+  width: 100%;
+}
+
+.btn-primary:hover {
+  color: var(--bg-primary);
+  border-color: var(--text-primary);
+}
+
+/* Animations - Subtle */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+.animate-fade-in {
+  animation: fadeIn 1s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+/* Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: var(--bg-primary);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--text-secondary);
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--accent-primary);
+}
+
+/* Accessibility Focus States */
+:focus-visible {
+  outline: 2px dashed var(--accent-primary);
+  outline-offset: 4px;
+}

@@ -1,0 +1,150 @@
+.experience {
+  padding-top: 6rem;
+}
+
+.timeline {
+  position: relative;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.timeline::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 20px;
+  width: 2px;
+  background: var(--glass-border);
+}
+
+.timeline-item {
+  position: relative;
+  padding-left: 60px;
+  margin-bottom: 3rem;
+}
+
+.timeline-dot {
+  position: absolute;
+  top: 24px;
+  left: 14px;
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  background: var(--accent-primary);
+  box-shadow: 0 0 0 4px rgba(59, 130, 246, 0.2);
+}
+
+.timeline-content {
+  padding: 2rem;
+  transition: transform var(--transition-normal);
+}
+
+.timeline-content:hover {
+  transform: translateY(-5px);
+  border-color: rgba(59, 130, 246, 0.3);
+}
+
+.experience-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 1.5rem;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.role {
+  font-size: 1.5rem;
+  color: var(--text-primary);
+  margin-bottom: 0.25rem;
+}
+
+.company {
+  font-size: 1.2rem;
+  color: var(--accent-primary);
+  font-weight: 500;
+}
+
+.period-badge {
+  background: rgba(255, 255, 255, 0.1);
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--text-secondary);
+  border: 1px solid var(--glass-border);
+}
+
+.achievements-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.achievements-list li {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+  color: var(--text-secondary);
+  font-size: 1.05rem;
+}
+
+.bullet-icon {
+  color: var(--accent-secondary);
+  flex-shrink: 0;
+  margin-top: 4px;
+}
+
+.tech-stack {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid var(--glass-border);
+}
+
+.tech-label {
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+.tech-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.tech-tag {
+  background: rgba(200, 90, 23, 0.1);
+  color: var(--accent-primary);
+  border: 1px solid rgba(200, 90, 23, 0.2);
+  padding: 0.25rem 0.75rem;
+  border-radius: 4px;
+  font-size: 0.85rem;
+  font-weight: 500;
+}
+
+@media (max-width: 600px) {
+  .experience-header {
+    flex-direction: column;
+  }
+  
+  .timeline::before {
+    left: 15px;
+  }
+  
+  .timeline-dot {
+    left: 9px;
+  }
+  
+  .timeline-item {
+    padding-left: 45px;
+  }
+  
+  .timeline-content {
+    padding: 1.5rem;
+  }
+}

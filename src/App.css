@@ -1,0 +1,167 @@
+/* ── scroll progress bar ─────────────────────────── */
+.progress-bar-container {
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%; height: 3px;
+  background: transparent;
+  z-index: 1000;
+}
+.progress-bar {
+  height: 100%;
+  background: var(--accent-primary);
+  width: 0%;
+  transition: width 0.1s ease;
+}
+
+.app { min-height: 100vh; }
+
+/* ══ NAV ══════════════════════════════════════════ */
+.minimal-nav {
+  position: sticky;
+  top: 0;
+  z-index: 999;
+  height: 64px;
+  padding: 0 5%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: rgba(245, 243, 237, 0.94);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border-bottom: 1px solid var(--border-color);
+}
+
+.logo {
+  font-family: var(--font-heading);
+  font-size: 1.15rem;
+  font-weight: 500;
+  color: var(--text-primary);
+  text-decoration: none;
+  flex-shrink: 0;
+  white-space: nowrap;
+}
+
+.nav-links {
+  display: flex;
+  gap: 0.3rem;
+  align-items: center;
+  margin-left: auto;
+}
+
+/* ── all nav items same wrapper ── */
+.nav-item-wrap {
+  position: relative;
+}
+
+/* ══ THE BUTTON — every single nav btn ═══════════ */
+.nav-btn {
+  /* size */
+  height: 44px;
+  padding: 0 1.35rem;
+
+  /* layout */
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+
+  /* typography */
+  font-family: var(--font-body);
+  font-size: 0.875rem;
+  font-weight: 500;
+  white-space: nowrap;
+  text-decoration: none;
+  letter-spacing: 0.01em;
+
+  /* visual */
+  color: var(--text-secondary);
+  background: transparent;
+  border: 1.5px solid transparent;
+  border-radius: 10px;
+  cursor: pointer;
+  outline: none;
+  user-select: none;
+
+  /* motion */
+  transition:
+    background 0.18s ease,
+    color       0.18s ease,
+    border-color 0.18s ease,
+    box-shadow  0.18s ease;
+}
+
+/* hover — orange fill + white text */
+.nav-btn:hover {
+  background: var(--accent-primary);
+  color: #fff;
+  border-color: var(--accent-primary);
+  box-shadow: 0 3px 12px rgba(200, 90, 23, 0.28);
+}
+
+/* active — current page */
+.nav-btn.active {
+  background: var(--accent-primary);
+  color: #fff;
+  border-color: var(--accent-primary);
+  box-shadow: 0 2px 8px rgba(200, 90, 23, 0.25);
+}
+
+/* ── down arrow inside every button ── */
+.nav-arrow {
+  display: block;
+  flex-shrink: 0;
+  transition: transform 0.22s ease;
+  pointer-events: none;
+  /* inherit color from parent so it turns white on hover */
+  stroke: currentColor;
+}
+.nav-arrow-open {
+  transform: rotate(180deg);
+}
+
+/* ══ GET IN TOUCH BANNER (above footer) ══════════ */
+.home-contact-banner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
+  padding: 4rem 1.5rem 4.5rem;
+  background: linear-gradient(160deg, #fdf6ee 0%, #fff8f2 100%);
+  border-top: 1px solid var(--border-color);
+  text-align: center;
+}
+
+.home-contact-tagline {
+  font-family: var(--font-body);
+  font-size: 1.15rem;
+  color: var(--text-secondary);
+  margin: 0;
+  letter-spacing: 0.01em;
+}
+
+.home-contact-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.65rem;
+  padding: 1.05rem 3rem;
+  font-family: var(--font-body);
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #fff;
+  background: linear-gradient(135deg, #e8621a 0%, #C85A17 60%, #b04e12 100%);
+  border: none;
+  border-radius: 14px;
+  cursor: pointer;
+  box-shadow: 0 8px 28px rgba(200, 90, 23, 0.42);
+  transition: transform 0.22s ease, box-shadow 0.22s ease, opacity 0.22s ease;
+  letter-spacing: 0.015em;
+}
+
+.home-contact-btn:hover {
+  transform: translateY(-4px) scale(1.03);
+  box-shadow: 0 16px 40px rgba(200, 90, 23, 0.55);
+}
+
+.home-contact-btn:active {
+  transform: translateY(0);
+  box-shadow: 0 4px 16px rgba(200, 90, 23, 0.35);
+}
