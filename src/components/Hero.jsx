@@ -71,10 +71,12 @@ const Hero = () => {
               borderRight: '2px solid #FFFFFF',
               display: 'inline-block',
               marginTop: '0.75rem',
-              minWidth: '120px',
+              minWidth: '80px',
               maxWidth: '100%',
               minHeight: '1.5em',
-              whiteSpace: 'nowrap'
+              whiteSpace: 'nowrap',
+              overflowWrap: 'break-word',
+              wordBreak: 'break-word'
             }}>
               {text}
             </span>

@@ -115,3 +115,52 @@
   box-shadow: 0 4px 14px rgba(200, 90, 23, 0.35);
 }
 
+@media (max-width: 768px) {
+  .about {
+    padding-top: var(--space-6);
+    margin-top: var(--space-6);
+  }
+  .about-bio {
+    max-width: 100%;
+  }
+  .bio-text {
+    font-size: 1rem;
+  }
+  .highlight-card {
+    padding: var(--space-2);
+    gap: var(--space-2);
+  }
+  .highlight-title {
+    font-size: 1.1rem;
+  }
+  .highlight-text {
+    font-size: 0.88rem;
+  }
+  .about-contact-btn {
+    padding: 0.85rem 2rem;
+    font-size: 0.95rem;
+    width: 100%;
+    justify-content: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .about {
+    padding-top: var(--space-5);
+    padding-bottom: var(--space-4);
+    margin-top: var(--space-5);
+  }
+  .bio-text {
+    font-size: 0.92rem;
+    line-height: 1.65;
+  }
+  .highlight-card {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .about-contact-btn {
+    padding: 0.8rem 1.5rem;
+    font-size: 0.9rem;
+    border-radius: 12px;
+  }
+}

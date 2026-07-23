@@ -181,11 +181,34 @@
 }
 
 @media (max-width: 560px) {
+  .skills {
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+  }
   .skills-grid {
     grid-template-columns: 1fr;
     gap: 2rem;
   }
   .skill-card {
     padding: 1.8rem 1.6rem;
+  }
+  .skills-header {
+    margin-bottom: 2.5rem;
+  }
+  .skill-dots {
+    display: none;
+  }
+  .skill-backdrop {
+    display: none;
+  }
+  .skill-card-wrap {
+    padding-top: 0;
+    padding-right: 0;
+  }
+  .category-title {
+    font-size: 1.05rem;
+  }
+  .skill-name {
+    font-size: 0.92rem;
   }
 }
