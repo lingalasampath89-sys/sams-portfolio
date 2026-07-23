@@ -278,13 +278,97 @@
 
 /* ─── Responsive ───────────────────────────────────────────── */
 @media (max-width: 768px) {
+  .footer {
+    padding-top: 4rem;
+    padding-bottom: 3rem;
+  }
+
   .contact-row {
     flex-direction: column;
+  }
+
+  .direct-row {
+    gap: 1rem;
+  }
+
+  .hub-card {
+    min-width: auto;
+    padding: 1.4rem 1.5rem;
+  }
+
+  .direct-card {
+    min-width: auto;
   }
 
   .footer-bottom {
     flex-direction: column;
     text-align: center;
+  }
+
+  .footer-cta-btn {
+    padding: 0.85rem 2rem;
+    font-size: 0.95rem;
+  }
+
+  .contact-subtitle {
+    font-size: 0.95rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .footer {
+    padding-top: 3rem;
+    padding-bottom: 2rem;
+  }
+
+  .hub-card {
+    padding: 1.2rem 1rem;
+    border-radius: 12px;
+  }
+
+  .hub-icon {
+    width: 44px;
+    height: 44px;
+    border-radius: 10px;
+  }
+
+  .hub-label {
+    font-size: 0.9rem;
+  }
+
+  .hub-sub {
+    font-size: 0.72rem;
+  }
+
+  .direct-card {
+    padding: 1.5rem;
+    border-radius: 14px;
+  }
+
+  .direct-title {
+    font-size: 1rem;
+  }
+
+  .direct-link {
+    font-size: 0.85rem;
+    padding: 0.45rem 0.85rem;
+  }
+
+  .contact-group-label {
+    font-size: 0.72rem;
+  }
+
+  .footer-socials {
+    justify-content: center;
+  }
+
+  .footer-social-icon {
+    width: 36px;
+    height: 36px;
+  }
+
+  .footer-copyright {
+    font-size: 0.8rem;
   }
 }
 

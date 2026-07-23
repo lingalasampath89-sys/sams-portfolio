@@ -299,4 +299,48 @@
   .hpj-section {
     padding: 4rem 1rem;
   }
+  .hpj-title {
+    font-size: clamp(1.5rem, 5vw, 2.2rem);
+  }
+  .hpj-subtitle {
+    font-size: 0.9rem;
+  }
+  .hpj-card-body {
+    padding: 1.2rem 1.25rem 1.4rem;
+  }
+  .hpj-card-title {
+    font-size: 0.92rem;
+  }
+  .hpj-card-desc {
+    font-size: 0.8rem;
+  }
+  .hpj-cta {
+    padding: 2rem 1.25rem;
+    border-radius: 14px;
+  }
+  .hpj-cta-text {
+    font-size: 0.9rem;
+  }
+  .hpj-btn-primary,
+  .hpj-btn-secondary {
+    height: 42px;
+    padding: 0 1.5rem;
+    font-size: 0.82rem;
+  }
 }
+
+@media (max-width: 400px) {
+  .hpj-section {
+    padding: 3rem 0.75rem;
+  }
+  .hpj-cta-btns {
+    flex-direction: column;
+    width: 100%;
+  }
+  .hpj-btn-primary,
+  .hpj-btn-secondary {
+    width: 100%;
+    justify-content: center;
+  }
+}
+

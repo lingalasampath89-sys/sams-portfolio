@@ -306,5 +306,59 @@
     flex-wrap: wrap;
     justify-content: flex-end;
   }
-  .abp-edu-period { display: none; }
+  .abp-edu-period {
+    display: none;
+  }
+  .abp-title {
+    font-size: clamp(1.6rem, 5vw, 2.4rem);
+  }
+  .abp-card {
+    padding: 1.4rem;
+  }
+  .abp-edu-row {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.6rem;
+    padding: 0.85rem 1rem;
+  }
+  .abp-edu-right {
+    width: 100%;
+    justify-content: flex-start;
+  }
 }
+
+@media (max-width: 480px) {
+  .abp-page {
+    padding: 1.5rem 1rem 4rem;
+  }
+  .abp-back-btn {
+    font-size: 0.78rem;
+    margin-bottom: 1.5rem;
+  }
+  .abp-bio {
+    font-size: 0.88rem;
+  }
+  .abp-card-title {
+    font-size: 0.9rem;
+  }
+  .abp-detail-label {
+    font-size: 0.68rem;
+  }
+  .abp-detail-value {
+    font-size: 0.82rem;
+  }
+  .abp-edu-degree {
+    font-size: 0.85rem;
+  }
+  .abp-edu-institution {
+    font-size: 0.74rem;
+  }
+  .abp-cert-item {
+    font-size: 0.82rem;
+    padding: 0.5rem 0;
+  }
+  .abp-body {
+    gap: 1rem;
+  }
+}
+

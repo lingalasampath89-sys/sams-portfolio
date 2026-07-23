@@ -71,7 +71,8 @@ const Hero = () => {
               borderRight: '2px solid #FFFFFF',
               display: 'inline-block',
               marginTop: '0.75rem',
-              minWidth: '240px',
+              minWidth: '120px',
+              maxWidth: '100%',
               minHeight: '1.5em',
               whiteSpace: 'nowrap'
             }}>

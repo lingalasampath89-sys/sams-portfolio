@@ -65,11 +65,37 @@ function NavItem({ label, to, id, active }) {
 function NavBar() {
   const location = useLocation();
   const p = location.pathname;
+  const [mobileOpen, setMobileOpen] = useState(false);
+
+  /* close drawer on route change */
+  useEffect(() => {
+    setMobileOpen(false);
+  }, [location.pathname]);
+
+  /* lock body scroll while open */
+  useEffect(() => {
+    document.body.style.overflow = mobileOpen ? 'hidden' : '';
+    return () => { document.body.style.overflow = ''; };
+  }, [mobileOpen]);
 
   return (
     <nav className="minimal-nav">
       <Link to="/" className="logo">Lingala Sampath Kumar</Link>
-      <div className="nav-links">
+
+      {/* Hamburger toggle */}
+      <button
+        className={`hamburger ${mobileOpen ? 'open' : ''}`}
+        onClick={() => setMobileOpen(!mobileOpen)}
+        aria-label="Toggle menu"
+        id="hamburger-btn"
+      >
+        <span /><span /><span />
+      </button>
+
+      {/* Overlay */}
+      {mobileOpen && <div className="nav-overlay" onClick={() => setMobileOpen(false)} />}
+
+      <div className={`nav-links ${mobileOpen ? 'nav-links-open' : ''}`}>
         <NavItem label="Work"         to="/projects"   id="nav-work"       active={p === '/projects'} />
         <NavItem label="Projects"     to="/projects"   id="nav-projects"   active={p === '/projects'} />
         <NavItem label="Experience"   to="/experience" id="nav-experience" active={p === '/experience'} />
