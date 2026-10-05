@@ -72,7 +72,7 @@
 
 /* Individual card */
 .hpj-card {
-  background: #fff;
+  background: var(--bg-secondary);
   border: 1px solid var(--border-color);
   border-radius: 16px;
   overflow: hidden;
@@ -217,7 +217,7 @@
   align-items: center;
   gap: 1.25rem;
   padding: 3rem 2rem;
-  background: #fff;
+  background: var(--bg-secondary);
   border: 1px solid var(--border-color);
   border-radius: 20px;
   text-align: center;
@@ -249,7 +249,7 @@
   font-family: var(--font-body);
   font-size: 0.88rem;
   font-weight: 600;
-  color: #fff;
+  color: var(--bg-primary);
   background: var(--accent-primary);
   border: none;
   border-radius: 10px;
@@ -282,7 +282,7 @@
 }
 .hpj-btn-secondary:hover {
   background: var(--accent-primary);
-  color: #fff;
+  color: var(--bg-primary);
 }
 
 /* Responsive */

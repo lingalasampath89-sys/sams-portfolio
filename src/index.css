@@ -1,19 +1,19 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap');
 
 :root {
-  /* Color Palette - Earthy Cream & Deep Green (Image Inspired) */
-  --bg-primary: #F5F3ED; /* Cream / Off-white */
-  --bg-secondary: #FFFFFF; /* White for cards */
-  --bg-tertiary: #1B241F; /* Deep Forest Green */
+  /* Color Palette - Monochromatic Orange */
+  --bg-primary: #fff6ee; /* Very light orange (Background) */
+  --bg-secondary: #ffe5d0; /* Light orange (Cards) */
+  --bg-tertiary: #ffcca6; /* Moderate orange */
   
-  --text-primary: #1C1E1A; /* Charcoal Black */
-  --text-secondary: #5F6158; /* Muted Olive Grey */
-  --text-highlight: #1B241F; /* Deep Forest Green */
-  --text-emphasized: #1B241F; 
+  --text-primary: #4a2200; /* Very dark brown-orange (High contrast text) */
+  --text-secondary: #8a4d1a; /* Medium brown-orange (Moderate contrast text) */
+  --text-highlight: #ff7300;
+  --text-emphasized: #4a2200; 
   
-  --accent-primary: #C85A17; /* Elegant Earthy Burnt Orange */
+  --accent-primary: #ff7300; /* Bright orange */
   
-  --border-color: #DCE0D5;
+  --border-color: #ffc299; /* Light orange border */
   
   /* Typography */
   --font-heading: 'Playfair Display', serif;
@@ -141,7 +141,7 @@ p {
 
 .btn-primary {
   background: var(--accent-primary);
-  color: #FFFFFF;
+  color: var(--bg-primary);
   border-color: var(--accent-primary);
   position: relative;
   overflow: hidden;

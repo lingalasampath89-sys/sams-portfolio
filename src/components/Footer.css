@@ -204,7 +204,7 @@
   font-family: var(--font-body);
   font-size: 1.05rem;
   font-weight: 700;
-  color: #fff;
+  color: var(--bg-primary);
   background: linear-gradient(135deg, #e8621a 0%, #C85A17 60%, #b04e12 100%);
   border: none;
   border-radius: 14px;
@@ -264,7 +264,7 @@
 
 .footer-social-icon:hover {
   background: var(--accent-primary);
-  color: #fff;
+  color: var(--bg-primary);
   border-color: var(--accent-primary);
   transform: translateY(-3px);
   box-shadow: 0 6px 18px rgba(200, 90, 23, 0.35);

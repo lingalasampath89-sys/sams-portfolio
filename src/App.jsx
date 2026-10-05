@@ -10,6 +10,8 @@ import ProjectsPage from './components/ProjectsPage'
 import ExperiencePage from './components/ExperiencePage'
 import AboutPage from './components/AboutPage'
 import ContactPage from './components/ContactPage'
+import ServicesPage from './components/ServicesPage'
+import TechnologyCloud from './components/TechnologyCloud'
 import './App.css'
 
 /* ── Down-arrow SVG (no icon library) ─────────────── */
@@ -80,7 +82,17 @@ function NavBar() {
 
   return (
     <nav className="minimal-nav">
-      <Link to="/" className="logo">Lingala Sampath Kumar</Link>
+      <Link to="/" className="logo">
+        <div style={{display: 'flex', alignItems: 'center', gap: '8px'}}>
+          <div style={{
+            width: '24px', height: '24px', 
+            background: 'var(--accent-primary)', 
+            transform: 'skewX(-15deg)', 
+            borderRadius: '2px'
+          }}></div>
+          PORTFOLIO
+        </div>
+      </Link>
 
       {/* Hamburger toggle */}
       <button
@@ -96,11 +108,16 @@ function NavBar() {
       {mobileOpen && <div className="nav-overlay" onClick={() => setMobileOpen(false)} />}
 
       <div className={`nav-links ${mobileOpen ? 'nav-links-open' : ''}`}>
-        <NavItem label="Work"         to="/projects"   id="nav-work"       active={p === '/projects'} />
-        <NavItem label="Projects"     to="/projects"   id="nav-projects"   active={p === '/projects'} />
-        <NavItem label="Experience"   to="/experience" id="nav-experience" active={p === '/experience'} />
+        <NavItem label="Home"         to="/"           id="nav-home"       active={p === '/'} />
         <NavItem label="About"        to="/about"      id="nav-about"      active={p === '/about'} />
-        <NavItem label="Get in Touch" to="/contact"    id="nav-contact"    active={p === '/contact'} />
+        <NavItem label="Services"     to="/services"   id="nav-services"   active={p === '/services'} />
+        <NavItem label="Portfolio"    to="/projects"   id="nav-portfolio"  active={p === '/projects'} />
+        <NavItem label="Page"         to="/page"       id="nav-page"       active={p === '/page'} />
+        <NavItem label="Contact"      to="/contact"    id="nav-contact"    active={p === '/contact'} />
+      </div>
+
+      <div className="nav-cta">
+        <button className="btn-primary" style={{borderRadius: '4px', textTransform: 'capitalize', padding: '0.6rem 1.25rem', fontSize: '0.85rem', fontWeight: 600, border: 'none'}} onClick={() => navigate('/contact')}>Get Free Consultant</button>
       </div>
     </nav>
   );
@@ -153,11 +170,13 @@ function PageWrapper({ children }) {
 function App() {
   return (
     <BrowserRouter>
+      <TechnologyCloud />
       <Routes>
         <Route path="/"           element={<Home />} />
         <Route path="/projects"   element={<PageWrapper><ProjectsPage /></PageWrapper>} />
         <Route path="/experience" element={<PageWrapper><ExperiencePage /></PageWrapper>} />
         <Route path="/about"      element={<PageWrapper><AboutPage /></PageWrapper>} />
+        <Route path="/services"   element={<PageWrapper><ServicesPage /></PageWrapper>} />
         <Route path="/contact"    element={<PageWrapper><ContactPage /></PageWrapper>} />
       </Routes>
     </BrowserRouter>

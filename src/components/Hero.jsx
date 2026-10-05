@@ -50,25 +50,35 @@ const Hero = () => {
             visible: { opacity: 1, transition: { staggerChildren: 0.15 } }
           }}
         >
+          <motion.h4
+            className="hero-subtitle"
+            style={{ color: 'var(--accent-primary)', textTransform: 'uppercase', letterSpacing: '1px', fontSize: '0.9rem', marginBottom: '1rem', fontWeight: 600 }}
+            variants={{ hidden: { opacity: 0, y: 30 }, visible: { opacity: 1, y: 0, transition: { duration: 0.6, ease: "easeOut" } } }}
+          >
+            GET EVERY SINGLE SOLUTIONS.
+          </motion.h4>
+
           <motion.h1
             className="hero-title"
             variants={{ hidden: { opacity: 0, y: 30 }, visible: { opacity: 1, y: 0, transition: { duration: 0.6, ease: "easeOut" } } }}
           >
-            Lingala Sampath Kumar
+            I'm Developer <br/>
+            Lingala Sampath
           </motion.h1>
 
           <motion.p
             className="hero-value-prop"
+            style={{ fontSize: '0.95rem', maxWidth: '480px', color: 'var(--text-secondary)' }}
             variants={{ hidden: { opacity: 0, y: 30 }, visible: { opacity: 1, y: 0, transition: { duration: 0.6, ease: "easeOut" } } }}
           >
             Building intelligent, data-driven solutions that automate workflows and solve complex problems using <br />
             <span className="typewriter-text" style={{
-              color: '#FFFFFF',
+              color: 'var(--bg-secondary)',
               fontWeight: 600,
               background: 'var(--accent-primary)',
               padding: '4px 12px',
               borderRadius: '4px',
-              borderRight: '2px solid #FFFFFF',
+              borderRight: '2px solid var(--bg-secondary)',
               display: 'inline-block',
               marginTop: '0.75rem',
               minWidth: '80px',
@@ -82,53 +92,22 @@ const Hero = () => {
             </span>
           </motion.p>
 
-
-
-          {/* Stats */}
           <motion.div
-            className="hero-stats"
+            className="hero-cta-group"
             variants={{ hidden: { opacity: 0, y: 30 }, visible: { opacity: 1, y: 0, transition: { duration: 0.6, ease: "easeOut" } } }}
           >
-            <div className="stat-card">
-              <span className="stat-number">4+</span>
-              <span className="stat-label">Key Projects</span>
-            </div>
-            <div className="stat-card">
-              <span className="stat-number">15+</span>
-              <span className="stat-label">Tech Skills</span>
-            </div>
-            <div className="stat-card">
-              <span className="stat-number">3+</span>
-              <span className="stat-label">Certifications</span>
-            </div>
-            <div className="stat-card">
-              <span className="stat-number">2026</span>
-              <span className="stat-label">Graduation</span>
-            </div>
+            <button className="btn-primary" style={{ padding: '0.8rem 2rem', borderRadius: '4px', border: 'none', fontWeight: 700, fontSize: '0.95rem', background: 'var(--accent-primary)', color: '#FFFFFF' }}>Learn More</button>
+            <button className="btn-secondary" style={{ padding: '0.8rem 2rem', borderRadius: '4px', border: '1px solid var(--accent-primary)', background: 'transparent', color: 'var(--text-primary)', fontWeight: 700, fontSize: '0.95rem' }}>Hire Me</button>
           </motion.div>
 
-          <motion.div
-            className="hero-scroll-indicator"
-            variants={{ hidden: { opacity: 0, y: 30 }, visible: { opacity: 1, y: 0, transition: { duration: 0.6, ease: "easeOut" } } }}
-          >
-            <span className="muted">Scroll to explore</span>
-            <svg className="scroll-arrow" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1" strokeLinecap="round" strokeLinejoin="round">
-              <line x1="12" y1="5" x2="12" y2="19"></line>
-              <polyline points="19 12 12 19 5 12"></polyline>
-            </svg>
-          </motion.div>
+
+
+
         </motion.div>
 
         <div className="hero-image-container">
           <div className="hero-image-wrapper">
-            <div className="hero-image-backdrop"></div>
-            <div className="hero-image-dots"></div>
-            <img src="/profile.jpg" alt="Lingala Sampath Kumar" loading="lazy" />
-            <div className="hero-badge">
-              <strong>AI &amp; ML Engineering</strong>
-              <span className="badge-subtext">B.Tech (AI &amp; ML)</span>
-              <span className="badge-highlight">KITS, Guntur | 2026</span>
-            </div>
+            <img src="/profile.jpg" alt="Lingala Sampath" loading="lazy" />
           </div>
         </div>
       </div>

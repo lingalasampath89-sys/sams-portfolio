@@ -3,79 +3,7 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { GitBranch, ExternalLink, X } from 'lucide-react';
 import './Projects.css';
 
-const aiProjects = [
-  {
-    id: 1,
-    title: "AI-Powered Excel Summarizer",
-    tagline: "Automated analysis tool for large datasets",
-    tags: ["Python", "Generative AI", "NLP"],
-    problem: "Large Excel datasets required significant manual effort to extract insights, leading to delayed decision-making and potential human error.",
-    solution: "Developed a Python-based pipeline leveraging NLP and Generative AI to parse data. Automated trend detection and pattern recognition algorithms generate concise summaries instantly.",
-    architecture: "Python backend using Pandas for efficient data manipulation and integrated Generative AI models to handle nuanced generation of human-readable insights from raw data.",
-    challenges: "Handling messy data with missing values and preventing hallucinations in the LLM outputs required strict prompt engineering and validation steps.",
-    results: "Reduced manual analysis effort by ~60% and enhanced reporting accuracy for business scenarios. Processed 50+ complex datasets successfully.",
-    link: "#",
-    github: "https://github.com",
-  },
-  {
-    id: 2,
-    title: "Intelligent XML Parsing System",
-    tagline: "AI/ML system for noisy data structuring",
-    tags: ["Machine Learning", "XML", "Python"],
-    problem: "Existing XML parsing methods failed to efficiently handle complex, incomplete, and noisy XML data structures in legacy systems.",
-    solution: "Designed an AI/ML-based architecture to clean and structure the data. Applied machine learning classification techniques to infer missing data and validate structures.",
-    architecture: "Utilized ML classification models instead of traditional regex/XPath rules to allow the system to adapt to unpredictable noise and structural variations.",
-    challenges: "Training the model on highly unstructured and noisy data required extensive data cleaning and synthetic data generation.",
-    results: "Improved extraction accuracy by ~30% and significantly reduced manual correction time for large-scale enterprise datasets.",
-    link: "https://deluxe-moonbeam-c85fbb.netlify.app",
-    github: "https://github.com",
-  },
-  {
-    id: 3,
-    title: "Oil Sales E-Commerce Platform",
-    tagline: "Full-stack marketplace for oil products",
-    tags: ["React.js", "Node.js", "MySQL"],
-    problem: "Needed a reliable, dynamic platform to handle product catalogs, secure user authentication, and complex order management for an oil services business.",
-    solution: "Built a dynamic React frontend and a secure Node.js backend integrated with MySQL for robust data management and secure checkout flows.",
-    architecture: "Separated concerns using a REST API approach to ensure the frontend remained fast and decoupled from the database operations. Implemented JWT authentication.",
-    challenges: "Ensuring secure transactions and handling complex pricing structures based on bulk orders and real-time inventory.",
-    results: "Improved user engagement, achieved seamless responsiveness across 15+ device resolutions, and successfully digitized the client's sales pipeline.",
-    link: "#",
-    github: "https://github.com",
-  },
-];
-
-const frontendProjects = [
-  {
-    id: 4,
-    title: "AISI Organization Website",
-    tagline: "Professional web presence with modern UI",
-    tags: ["React.js", "Frontend", "UI/UX"],
-    problem: "The organization required a modern, structured presentation of content that worked flawlessly across all devices and clearly communicated their mission.",
-    solution: "Translated UI mockups into reusable React components, focusing on clean design principles and structuring the content navigation logically.",
-    architecture: "Prioritized native HTML5/CSS3 semantics alongside React to maximize accessibility and SEO performance. Optimized all assets for rapid delivery.",
-    challenges: "Ensuring cross-device compatibility and maintaining sub-second load times while keeping the UI visually rich.",
-    results: "Delivered a fully responsive, highly optimized web experience with improved accessibility and <1s load times.",
-    link: "https://my-organisation.vercel.app/",
-    github: "https://github.com",
-    image: "/aisi-mockup.png",
-  },
-  {
-    id: 5,
-    title: "KJ Systems",
-    tagline: "Elite healthcare software solutions — demo build",
-    tags: ["React.js", "Frontend", "UI Design"],
-    isDemo: true,
-    problem: "Built to demonstrate frontend development skills — a fully functional demo of an enterprise-level healthcare software company website.",
-    solution: "Designed and developed a modern, professional multi-page site with clean navigation, feature sections, and responsive layouts using React and CSS.",
-    architecture: "Component-based React architecture with clean separation of pages and reusable UI components. Deployed on Vercel for fast global delivery.",
-    challenges: "Recreating an enterprise feel with premium aesthetics while keeping the build lightweight and fast-loading.",
-    results: "Demonstrates strong frontend capability — responsive design, smooth navigation, and enterprise-level UI/UX across all screen sizes.",
-    link: "https://kj-systems-demo.vercel.app/",
-    github: "https://github.com",
-    demoNote: "Demo only — built for skill showcase, not a real product.",
-  },
-];
+import { aiProjects, frontendProjects } from '../data/projectsData';
 
 const ProjectCard = ({ project, activeProject, toggleProject, projectRefs, index }) => (
   <motion.div
@@ -224,14 +152,14 @@ const Projects = () => {
   };
 
   return (
-    <section className="projects section container" id="projects">
-      <h2 className="section-title">Selected Work</h2>
+    <section className="projects section container" id="projects" style={{ position: 'relative' }}>
+      <h2 className="section-title" style={{ position: 'relative', zIndex: 1 }}>Selected Work</h2>
 
       {/* ── AI / ML Projects ── */}
-      <div className="projects-category-label">
+      <div className="projects-category-label" style={{ position: 'relative', zIndex: 1 }}>
         <span className="category-pill ai-pill">🤖 AI &amp; ML Projects</span>
       </div>
-      <div className="projects-grid">
+      <div className="projects-grid" style={{ position: 'relative', zIndex: 1 }}>
         {aiProjects.map((project, index) => (
           <ProjectCard
             key={project.id}
